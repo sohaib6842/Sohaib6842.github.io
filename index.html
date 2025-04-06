@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>صهيب</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #56cfe1, #72efdd);
+      color: #1d3557;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: rgba(29, 53, 87, 0.9);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+
+    header h1 {
+      font-size: 40px;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #f1faee;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 30px 50px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .fact-box {
+      background-color: #f1faee;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .fact-box:hover {
+      transform: scale(1.02);
+    }
+
+    h2 {
+      color: #023e8a;
+    }
+
+    footer {
+      text-align: center;
+      background-color: rgba(29, 53, 87, 0.9);
+      color: white;
+      padding: 15px;
+      margin-top: 30px;
+      animation: slideUp 1s ease-in;
+    }
+
+    /* Animations */
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .login-container, .contact-container {
+      margin: 50px auto;
+      width: 50%;
+      padding: 30px;
+      background-color: #f1faee;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    input[type="text"], input[type="password"], input[type="email"], textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #023e8a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    button:hover {
+      background-color: #1d3557;
+    }
+
+    .search-bar {
+      width: 100%;
+      padding: 10px;
+      margin: 20px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    /* صفحات مختلفة */
+    .page {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- الرأس -->
+  <header>
+    <h1>صهيب</h1>
+    <nav>
+      <a href="javascript:void(0);" onclick="showPage('home')">الرئيسية</a>
+      <a href="javascript:void(0);" onclick="showPage('articles')">مقالات</a>
+      <a href="javascript:void(0);" onclick="showPage('contact')">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <!-- الصفحة الرئيسية -->
+  <div class="container page" id="home">
+    <h2>أهلاً بك في عالم الحيوانات</h2>
+    <p>هنا تجد كل ما يخص عالم الحيوانات من حقائق مذهلة ومعلومات مفيدة. استمتع بتصفح مقالاتنا!</p>
+  </div>
+
+  <!-- مقالات -->
+  <div class="container page" id="articles">
+    <h2>حقائق مذهلة عن عالم الحيوانات</h2>
+
+    <!-- المقالات الـ 20 -->
+    <div class="fact-box">
+      <h3>الأخطبوط يمتلك ثلاثة قلوب!</h3>
+      <p>يملك الأخطبوط قلبين يضخان الدم إلى الخياشيم، والثالث يضخ الدم إلى باقي الجسم. المثير أكثر؟ عندما يسبح، يتوقف القلب الرئيسي!</p>
+      <img src="https://example.com/octopus.jpg" alt="أخطبوط" width="100%">
+    </div>
+
+    <div class="fact-box">
+      <h3>الفيلة لا تستطيع القفز</h3>
+      <p>رغم قوتها وضخامتها، إلا أن الفيلة هي الحيوانات الوحيدة التي لا تستطيع القفز بسبب وزنها وطبيعة أرجلها.</p>
+      <img src="https://example.com/elephant.jpg" alt="فيل" width="100%">
+    </div>
+
+    <div class="fact-box">
+      <h3>قنديل البحر خالد!</h3>
+      <p>بعض أنواع قناديل البحر يمكنها إعادة نفسها إلى مرحلة الطفولة بعد البلوغ، مما يجعلها قريبة جداً من فكرة "الخلود البيولوجي".</p>
+      <img src="https://example.com/jellyfish.jpg" alt="قنديل البحر" width="100%">
+    </div>
+
+    <div class="fact-box">
+      <h3>النعامة أسرع من الحصان</h3>
+      <p>يمكن للنعامة الركض بسرعة تصل إلى 70 كلم/س، وتتفوق بذلك على كثير من الخيول في المسافات القصيرة.</p>
+      <img src="https://example.com/ostrich.jpg" alt="نعامة" width="100%">
+    </div>
+
+    <!-- المزيد من المقالات -->
+    <div class="fact-box">
+      <h3>الأسد ملك الغابة</h3>
+      <p>الأسود هي واحدة من أكثر الحيوانات شهرة، ويشتهرون بكونهم من أقوى الحيوانات البرية. تتميز الأسود بأسنان حادة وعضلات قوية تساعدها في الصيد.</p>
+      <img src="https://example.com/lion.jpg" alt="أسد" width="100%">
+    </div>
+
+    <div class="fact-box">
+      <h3>الزرافة أطول حيوان بري</h3>
+      <p>الزرافات هي أطول الحيوانات البرية، حيث يمكن أن يصل طولها إلى 5.5 متر. تتمتع برقبة طويلة تمكنها من الوصول إلى أوراق الأشجار العالية.</p>
+      <img src="https://example.com/giraffe.jpg" alt="زرافة" width="100%">
+    </div>
+
+    <div class="fact-box">
+      <h3>الدلافين ذكية للغاية</h3>
+      <p>الدلافين تعتبر من أذكى الحيوانات البحرية. لديها القدرة على التواصل مع بعضها البعض باستخدام الأصوات وتستطيع تعلم حيل جديدة بسهولة.</p>
+      <img src="https://example.com/dolphin.jpg" alt="دولفين" width="100%">
+    </div>
+
+    <div class="fact-box">
+      <h3>الخفاش هو الوحيد الذي يطير بين الثدييات</h3>
+      <p>الخفافيش هي الحيوانات الوحيدة القادرة على الطيران بين الثدييات. يمكن لبعض الأنواع أن تطير لمسافات طويلة أثناء بحثها عن الطعام.</p>
+      <img src="https://example.com/bat.jpg" alt="خفاش" width="100%">
+    </div>
+
+    <div class="fact-box">
+      <h3>النحل يعمل بشكل جماعي</h3>
+      <p>النحل هو حشرة اجتماعية تعمل بشكل جماعي في مستعمرات، ولها دور كبير في تلقيح النباتات مما يساعد على نمو المحاصيل.</p>
+      <img src="https://example.com/bee.jpg" alt="نحلة" width="100%">
+    </div>
+
+    <div class="fact-box">
+      <h3>التماسيح تعيش لآلاف السنين</h3>
+      <p>التماسيح من أقدم الحيوانات على وجه الأرض وتعيش لأكثر من 70 عامًا. يمكنها البقاء تحت الماء لفترات طويلة بفضل قدرتها على إغلاق فتحات التنفس.</p>
+      <img src="https://example.com/crocodile.jpg" alt="تمساح" width="100%">
+    </div>
+
+    <div class="fact-box">
+      <h3>الباندا يأكل معظم وقت يومه</h3>
+      <p>الباندا تعتمد على الخيزران كغذاء رئيسي، وتستهلك حوالي 12 ساعة يوميًا في أكل هذا النبات. لديهم معدة قصيرة لا تتناسب مع هضم الغذاء الحيواني.</p>
+      <img src="https://example.com/panda.jpg" alt="باندا" width="100%">
+    </div>
+  </div>
+
+  <!-- تواصل معنا -->
+  <div class="container page" id="contact">
+    <h2>تواصل معنا</h2>
+    <form id="contactForm" method="POST" action="mailto:fododo830@gmail.com">
+      <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
+      <textarea id="message" placeholder="رسالتك" rows="5" required></textarea>
+      <button type="submit">إرسال الرسالة</button>
+    </form>
+  </div>
+
+  <!-- التذييل -->
+  <footer>
+    &copy; 2025 - مشروع صهيب | جميع الحقوق محفوظة
+  </footer>
+
+  <script>
+    // عرض الصفحة المحددة
+    function showPage(pageId) {
+      // إخفاء كل الصفحات
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      
+      // إظهار الصفحة المختارة
+      const activePage = document.getElementById(pageId);
+      activePage.classList.add('active');
+    }
+
+    // عرض الصفحة الرئيسية عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', function() {
+      showPage('home');
+    });
+  </script>
+
+</body>
+</html>
